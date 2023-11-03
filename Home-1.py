@@ -22,6 +22,4 @@ st.write("## ความเครียด")
 st.write("## จัดทำโดย")
 st.write("## ธีรกานต์  คุ้มชุมแสง ")
 
-
 st.image('./images/diabetes.jpg')
-
