@@ -1,25 +1,62 @@
 import json
 import time
 import requests
-
+from util import set_background
 import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 
 st.set_page_config(
-    page_title="Theerakan_633230007 24.2",
+    page_title="Datascience Project",
     page_icon= ":bar_chart:",
 )
+set_background('./bg/bg2.jpg')
+st.sidebar.success("เลือกรายการด้านบน.")
+st.header("💯พยากรณ์คะแนนการเรียนจากเทคนิค Linear Regression!💯")
 
-st.image('./images/header.jpg')
-st.sidebar.markdown(" Home ")
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
-with open('./files/wave.css') as f:
-    css = f.read()
-st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+lottie_url_book = "https://lottie.host/f1caede9-11ad-4fa0-a873-d3f7381b441c/2pcTSp1O8U.json"
+lottie_book = load_lottieurl(lottie_url_book)
+st_lottie(lottie_book, key="book")
 
-st.write("ความเครียด")
-st.write("จัดทำโดย")
-st.write("ธีรกานต์  คุ้มชุมแสง ")
+st.header("📝📝📝")
+st.header("โดย นายสิทธิพงษ์ แจ้งไพร")
+st.header("รหัสนักศึกษา 633230019 หมู่เรียน 24.2")
+st.header("สาขาเทคโนโลยีสารสนเทศ")
+st.header("คณะวิทยาศาสตร์และเทคโนโลยี")
+st.header("มหาวิทยาลัยราชภัฏนครปฐม")
+st.balloons()
 
-st.image('./images/diabetes.jpg')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
