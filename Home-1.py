@@ -12,14 +12,14 @@ st.set_page_config(
 )
 
 st.image('./images/header.jpg')
-st.sidebar.markdown("# Home #")
+st.sidebar.markdown(" Home ")
 
 with open('./files/wave.css') as f:
     css = f.read()
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-st.write("## ความเครียด")
-st.write("## จัดทำโดย")
-st.write("## ธีรกานต์  คุ้มชุมแสง ")
+st.write("ความเครียด")
+st.write("จัดทำโดย")
+st.write("ธีรกานต์  คุ้มชุมแสง ")
 
 st.image('./images/diabetes.jpg')
